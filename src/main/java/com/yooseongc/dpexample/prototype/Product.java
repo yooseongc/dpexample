@@ -1,8 +1,7 @@
 package com.yooseongc.dpexample.prototype;
 
-public interface Product extends Cloneable {
+import java.io.Serializable;
 
-	public abstract void use(String s);
-	public abstract Product createClone();
-	
+public interface Product extends Serializable {
+    void use(String s);
 }
