@@ -4,7 +4,11 @@ import java.util.stream.IntStream;
 
 public class MessageBox implements Product {
 
-    private char decochar;
+    /**
+	 *  
+	 */
+	private static final long serialVersionUID = 3456026481684594256L;
+	private char decochar;
     public MessageBox(char decochar) {
         this.decochar = decochar;
     }

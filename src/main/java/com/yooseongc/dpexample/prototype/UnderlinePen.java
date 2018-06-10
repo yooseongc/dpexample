@@ -2,7 +2,11 @@ package com.yooseongc.dpexample.prototype;
 
 public class UnderlinePen implements Product {
 
-    private char ulchar;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -5404474081583580784L;
+	private char ulchar;
     public UnderlinePen(char ulchar) {
         this.ulchar = ulchar;
     }
