@@ -6,9 +6,15 @@ public class Hand {
 	private Hand(RockPaperScissors handValue) {
 		this.handValue = handValue;
 	}
+	private static Hand ROCK = new Hand(RockPaperScissors.ROCK);
+	private static Hand SCISSORS = new Hand(RockPaperScissors.SCISSORS);
+	private static Hand PAPER = new Hand(RockPaperScissors.PAPER);
 	
 	public static Hand getHand(RockPaperScissors handValue) {
-		return new Hand(handValue);
+		if (handValue == RockPaperScissors.ROCK) return ROCK;
+		else if (handValue == RockPaperScissors.SCISSORS) return SCISSORS;
+		else if (handValue == RockPaperScissors.PAPER) return PAPER;
+		else return null;
 	}
 	
 	public RockPaperScissors getValue() {
