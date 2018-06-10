@@ -11,10 +11,10 @@ public class MessageBox implements Product {
 
     @Override
     public void use(String s) {
-        IntStream.rangeClosed(0, s.length() + 4).boxed().map(i -> "*").forEach(System.out::print);
+        IntStream.rangeClosed(0, s.length() + 4).boxed().map(i -> decochar).forEach(System.out::print);
         System.out.println(" ");
         System.out.println(decochar + " " + s + " " + decochar);
-        IntStream.rangeClosed(0, s.length() + 4).boxed().map(i -> "*").forEach(System.out::print);
+        IntStream.rangeClosed(0, s.length() + 4).boxed().map(i -> decochar).forEach(System.out::print);
         System.out.println(" ");
     }
 }
