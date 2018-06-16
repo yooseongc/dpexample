@@ -10,23 +10,25 @@ public class Manager {
 
     private HashMap<String, Product> showcase = new HashMap<>();
 
-    public HashMap<String, Product> getShowcase() {
+    // 절대 사용하면 안되는 Code. showcase의 element는 immutable라는 전제가 있어야 한다.
+    /*public HashMap<String, Product> getShowcase() {
     	return showcase;
-    }
-    
+    }*/
+
     public void showShowcase() {
-    	Object[] keys = showcase.keySet().toArray();
-    	for (int i = 0; i < keys.length; i++) {
-    		System.out.println(keys[i] + ": " + ((Object) showcase.get(keys[i])).toString());
-    	}
+        showcase.forEach((k, v) -> System.out.println(k + ": " + v));
+
+        // 위와 같은 표현
+        /*for(String k : showcase.keySet()) {
+            System.out.println(k + ": " + showcase.get(k));
+        }*/
     }
-    
+
     public void register(String name, Product proto) {
         showcase.put(name, proto);
     }
 
-    
-	public Product create(String protoname) {
+    public Product create(String protoname) {
         if(!showcase.containsKey(protoname))
             throw new IllegalArgumentException();
 
