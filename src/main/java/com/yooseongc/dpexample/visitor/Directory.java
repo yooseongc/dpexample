@@ -20,6 +20,7 @@ public class Directory extends Entry {
 	@Override
 	public String getName() {
 		return name;
+		
 	}
 
 	@Override
